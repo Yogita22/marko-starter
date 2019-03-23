@@ -72,5 +72,5 @@
     "*.marko.js"
   ],
   "private": true,
-  "baseurl": "/git-repo-name"
+  "baseurl": "/marko-starter"
 }
