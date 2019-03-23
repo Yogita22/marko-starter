@@ -1,0 +1,76 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Demo of how to build an app using marko-starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marko-js-samples/marko-starter-demo"
+  },
+  "license": "MIT",
+  "babel": {
+    "plugins": [
+      "transform-es2015-literals",
+      "transform-es2015-template-literals",
+      "transform-es2015-arrow-functions",
+      "transform-es2015-classes",
+      "transform-es2015-block-scoped-functions",
+      "transform-es2015-block-scoping"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-block-scoped-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.26.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-es2015-literals": "^6.22.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "del": "^3.0.0",
+    "eslint": "^4.2.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "gulp": "~4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "prettier": "^1.5.2",
+    "zip-dir": "^1.0.2"
+  },
+  "dependencies": {
+    "eventemitter3": "^3.1.0",
+    "framework7": "^4.1.0",
+    "framework7-icons": "^2.2.0",
+    "lasso-babel-transform": "^1.0.2",
+    "lodash": "^4.17.11",
+    "marko": "^4.15.3",
+    "marko-starter": "^2.0.4"
+  },
+  "scripts": {
+    "start": "marko-starter server",
+    "build": "NODE_ENV=production marko-starter build",
+    "serve-static": "NODE_ENV=production marko-starter serve-static",
+    "lint": "eslint src/",
+    "test": "npm run lint",
+    "prettier": "prettier src/**/*.{js,css,less} *.js --write",
+    "build:deploy": "npx gulp",
+    "build:win": "npx gulp",
+    "build:gitlab": "npx gulp",
+    "build:mobile": "npm version patch && npx gulp mobile"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "eslintIgnore": [
+    "*.marko.js"
+  ],
+  "private": true,
+  "baseurl": "/git-repo-name"
+}
